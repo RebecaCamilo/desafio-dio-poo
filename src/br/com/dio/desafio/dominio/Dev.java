@@ -28,11 +28,11 @@ public class Dev {
 	}
 	
 	public double calcularTotalXp() {
-		return this.conteudosInscritos
-				.stream()
-				.mapToDouble(conteudo -> conteudo.calcularXp()) //ou .mapToDouble(Conteudo::calcularXp)
-				.sum();
-	}
+        return this.conteudosConcluidos
+                .stream()
+                .mapToDouble(Conteudo::calcularXp) // ou .mapToDouble(conteudo -> conteudo.calcularXp())
+                .sum();
+    }
 	
 
 	public String getNome() {
